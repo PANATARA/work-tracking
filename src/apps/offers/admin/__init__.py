@@ -1,0 +1,1 @@
+from apps.offers.admin import admin
