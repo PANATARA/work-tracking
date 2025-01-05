@@ -1,7 +1,5 @@
 import os
 from datetime import timedelta
-from pathlib import Path
-import sys
 import environ
 
 root = environ.Path(__file__) - 2
@@ -182,8 +180,8 @@ CSRF_COOKIE_SECURE = False
     DRF SPECTACULAR
 """
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Pitomets",
-    "DESCRIPTION": "Эндпоинты для системы управления проектом",
+    "TITLE": "Work-Tracking",
+    "DESCRIPTION": "API documentation",
     "VERSION": "1.0.0",
     "TAGS": [
         {"name": "Authentication & Authorization", "description": "..........................."},
