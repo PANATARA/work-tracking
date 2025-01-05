@@ -19,7 +19,6 @@ class IsWorkspaceMember(IsAuthenticated):
             self.user = WorkspaceMember.objects.filter(
                 workspace_id=workspace_id, user_id=request.user.id
             ).first()
-            print("Вызов IsWorkspaceMember")
             return bool(self.user)
         return True
 

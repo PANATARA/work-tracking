@@ -1,6 +1,6 @@
 from drf_spectacular.utils import extend_schema, extend_schema_view
 
-from apps.workspace.serializers.api.workspace_user_config import (
+from apps.workspace.serializers.workspace_user_config import (
     UserFavoriteCreateSerializer, 
     UserFavoriteReadSerializer, 
     UserFavoriteUpdateSerializer,
@@ -181,7 +181,7 @@ workspace_logout_schema = extend_schema(
     tags=["Workspace -> Member"],
     summary="Logout me from apps.workspace", 
     responses={204: "No Content"}
-    # request=tasks.TaskTransferSerializer,  # указать сериализатор для входящих данных
+    # request=tasks.TaskTransferSerializer,
 )
 
 

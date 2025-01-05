@@ -11,7 +11,7 @@ from apps.workspace.models.workspace_config import (
     ProjectState,
     WorkspaceConfiguration,
 )
-from apps.workspace.serializers.api.workspace_config import (
+from apps.workspace.serializers.workspace_config import (
     TaskStatesSerializer,
     ProjectStatesSerializer,
     WorkspaceConfigurationSerializer,

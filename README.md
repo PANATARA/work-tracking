@@ -7,13 +7,11 @@ To set up the backend application using `docker-compose`, follow these steps:
 1. **Clone the repository**:
     ```sh
     git clone https://github.com/PANATARA/work-tracking.git
-    cd your-repo
+    cd work-tracking
     ```
 
 2. **Create a `.env` file**:
-    ```sh
-    cp .env.example .env
-    ```
+
     Modify the `.env` file with your specific configuration.
 
 3. **Build and start the containers**:

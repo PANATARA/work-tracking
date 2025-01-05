@@ -61,6 +61,6 @@ class ImageKeeper(InfoMixin):
     
     def clean(self):
         super().clean()
-        max_size_mb = 5  # Максимальный размер в МБ
+        max_size_mb = 5
         if self.image and self.image.size > max_size_mb * 1024 * 1024:
             raise ValidationError(f"File too large. Size should not exceed {max_size_mb}.")

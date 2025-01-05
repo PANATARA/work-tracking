@@ -5,7 +5,7 @@ from apps.projects.models import modules
 from core.serializers.mixins import InfoSerializerMixin
 from apps.projects.serializers.projects import ProjectShortReadOnlySerializer
 from apps.projects.validators import validate_start_end_dates
-from apps.workspace.serializers.api.workspace import WorkspaceShortSerializer
+from apps.workspace.serializers.workspace import WorkspaceShortSerializer
 
 User = get_user_model()
 

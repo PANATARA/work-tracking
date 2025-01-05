@@ -5,7 +5,7 @@ from rest_framework import serializers
 
 from core.serializers.mixins import StateDisplaySerializerMixin
 from apps.offers.services.offer_service import OfferService as of
-from apps.users.serializers.internal.users import UserShortSerializer
+from apps.users.serializers.users import UserShortSerializer
 from apps.workspace.models.workspace import Workspace
 from apps.offers.models.offers import Offer
 

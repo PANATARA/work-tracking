@@ -1,8 +1,8 @@
 from rest_framework import serializers
 
 from core.serializers.mixins import InfoSerializerMixin
-from apps.users.serializers.internal.users import UserShortSerializer
-from apps.workspace.serializers.api.workspace_members import MemberSerializer
+from apps.users.serializers.users import UserShortSerializer
+from apps.workspace.serializers.workspace_members import MemberSerializer
 
 
 class WorkspaceSerializer(InfoSerializerMixin):

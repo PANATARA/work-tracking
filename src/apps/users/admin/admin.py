@@ -41,7 +41,7 @@ class UserAdmin(UserAdmin):
     fieldsets = (
         (None, {"fields": ("phone_number", "email", "username")}),
         (
-            _("Личная информация"),
+            _("Personal information"),
             {
                 "fields": (
                     "first_name",

@@ -10,7 +10,7 @@ from rest_framework.generics import get_object_or_404 as get_object_or_HTTP404
 
 from core.models.image_keeper import ImageKeeper
 from apps.users.models.users_settings import UserSettings
-from apps.users.serializers.api import users as user_s
+from apps.users.serializers import users as user_s
 from apps.users.schema import (
     user_registration_schema,
     user_change_password_schema,

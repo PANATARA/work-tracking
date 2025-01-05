@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from crum import get_current_user
 
-from apps.users.serializers.internal.users import UserShortSerializer
+from apps.users.serializers.users import UserShortSerializer
 from apps.workspace.models.workspace import WorkspaceMember
 
 

@@ -9,7 +9,7 @@ from apps.workspace.constant import RoleChoices
 from apps.workspace.schema import reassign_workspace_owner_schema, workspace
 from core.views.mixins import BasePermissionByActionView
 from apps.workspace.models.workspace import Workspace, WorkspaceMember
-from apps.workspace.serializers.api import workspace as wp
+from apps.workspace.serializers import workspace as wp
 from apps.workspace.permissions import IsWorkspaceMember, IsWorkspaceAdmin, IsWorkspaceOwner, workspace_permission_by_role
 from apps.workspace.services.workspace_creator import (
     ReassignWorkspaceOwner,

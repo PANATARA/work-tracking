@@ -11,7 +11,7 @@ from apps.workspace.models.workspace_config import TaskState
 from apps.workspace.schema import user_workspace_config, user_workspace_favorite
 from apps.workspace.models.workspace_user_config import UserWorkspaceConfig, UserFavorite
 from apps.workspace.permissions import IsUsersConfig, IsWorkspaceMember, workspace_permission_by_role
-from apps.workspace.serializers.api.workspace_user_config import (
+from apps.workspace.serializers.workspace_user_config import (
     UserFavoriteCreateSerializer,
     UserFavoriteReadSerializer,
     UserFavoriteUpdateSerializer,

@@ -5,9 +5,9 @@ from apps.projects.serializers.projects import ProjectShortReadOnlySerializer
 from apps.projects.serializers.tags import TagSerializer
 from core.serializers.mixins import InfoSerializerMixin, TagSerializerMixin
 from apps.projects.models import tasks
-from apps.users.serializers.internal import users
-from apps.workspace.serializers.api.workspace import WorkspaceShortSerializer
-from apps.workspace.serializers.api.workspace_config import TaskStatesSerializer, TaskStatesSerializerLite
+from apps.users.serializers import users
+from apps.workspace.serializers.workspace import WorkspaceShortSerializer
+from apps.workspace.serializers.workspace_config import TaskStatesSerializer, TaskStatesSerializerLite
 
 
 class TaskReadOnlySerializer(InfoSerializerMixin):

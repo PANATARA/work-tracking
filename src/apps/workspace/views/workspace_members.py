@@ -9,7 +9,7 @@ from core.views.mixins import BasePermissionByActionView
 from apps.workspace.constant import RoleChoices
 from apps.workspace.models.workspace import Workspace, WorkspaceMember
 from apps.workspace.permissions import IsWorkspaceAdmin, IsWorkspaceMember
-from apps.workspace.serializers.api.workspace_members import MemberSerializer
+from apps.workspace.serializers.workspace_members import MemberSerializer
 from apps.workspace.services.workspace_member import MemberKickService, MemberLogoutService, WorkspaceMemberService
 
 

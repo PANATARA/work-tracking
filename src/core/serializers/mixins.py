@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from apps.users.serializers.internal.users import UserShortSerializer
+from apps.users.serializers.users import UserShortSerializer
 
 
 class TagSerializerMixin(serializers.Serializer):

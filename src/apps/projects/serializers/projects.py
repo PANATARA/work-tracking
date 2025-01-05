@@ -2,9 +2,9 @@ from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
 from core.serializers.mixins import InfoSerializerMixin
-from apps.users.serializers.internal.users import UserShortSerializer
-from apps.workspace.serializers.api.workspace import WorkspaceShortSerializer
-from apps.workspace.serializers.api.workspace_config import ProjectStatesSerializer
+from apps.users.serializers.users import UserShortSerializer
+from apps.workspace.serializers.workspace import WorkspaceShortSerializer
+from apps.workspace.serializers.workspace_config import ProjectStatesSerializer
 
 User = get_user_model()
 

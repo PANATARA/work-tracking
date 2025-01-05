@@ -7,7 +7,7 @@ from apps.projects.serializers.modules import ModuleShortReadOnlySerializer
 from apps.projects.serializers.projects import ProjectShortReadOnlySerializer
 from apps.projects.serializers.tasks import TaskShortReadOnlySerializer
 from apps.workspace.models.workspace import Workspace
-from apps.workspace.serializers.api.workspace import WorkspaceShortSerializer
+from apps.workspace.serializers.workspace import WorkspaceShortSerializer
 
 
 def get_entity_model(entity_type):

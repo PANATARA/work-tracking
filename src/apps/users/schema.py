@@ -1,7 +1,7 @@
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiResponse
 from rest_framework import status
 
-from apps.users.serializers.api import users
+from apps.users.serializers import users
 
 
 user_registration_schema = extend_schema_view(
@@ -26,17 +26,17 @@ user_me_profile_schema = extend_schema_view(
 
     get=extend_schema(
         tags=['Users -> Profile'],
-        summary='Профиль пользователя', 
+        summary='User profile', 
     ),
 
     put=extend_schema(
         tags=['Users -> Profile'],
-        summary='Изменить профиль пользователя', 
+        summary='Edit user profile', 
     ),
 
     patch=extend_schema(
         tags=['Users -> Profile'],
-        summary='Изменить частично профиль пользователя', 
+        summary='Partially edit user profile', 
     ),
 )
 
@@ -51,7 +51,7 @@ user_me_settings_schema = extend_schema_view(
 
     get=extend_schema(
         tags=['Users -> Settings'],
-        summary='Get user\'s settings ' , 
+        summary='Get user\'s settings', 
     ),
 
     put=extend_schema(
@@ -69,7 +69,7 @@ user_me_settings_schema = extend_schema_view(
 user_me_upload_avatar_schema = extend_schema_view(
     post=extend_schema(
         tags=['Users -> Profile'],
-        summary='Upload new user`s avatar',
+        summary='Upload new user\'s avatar',
         responses={
             status.HTTP_201_CREATED: OpenApiResponse(
                 description="Avatar uploaded successfully",

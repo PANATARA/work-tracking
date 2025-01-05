@@ -5,8 +5,7 @@ from rest_framework.exceptions import ParseError
 from django.db import transaction
 
 from apps.users.models.users_settings import UserSettings
-from apps.users.serializers.internal.profile import ProfileShortSerializer
-from apps.workspace.serializers.api.workspace import WorkspaceSerializer
+from apps.users.serializers.profile import ProfileShortSerializer
 
 User = get_user_model()
 
@@ -28,7 +27,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
     def validate_email(self, value):
         email = value.lower()
         if User.objects.filter(email=email).exists():
-            raise ParseError("Пользователь с такой почтой уже зарегистрирован.")
+            raise ParseError("Email duplicate")
         return email
 
     def validate_password(self, value):
@@ -52,7 +51,7 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
         user = self.instance
         old_password = attrs.pop("old_password")
         if not user.check_password(old_password):
-            raise ParseError("Проверьте правильность пароля")
+            raise ParseError("Check that password is correct")
         return attrs
 
     def validate_password_new_password(self, value):
@@ -67,7 +66,6 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
 
 
 class UserSettingsSerializer(serializers.ModelSerializer):
-    last_workspace_id = WorkspaceSerializer()
 
     class Meta:
         model = UserSettings
@@ -158,4 +156,18 @@ class UserSearchSerializer(serializers.ModelSerializer):
         )
     
     def get_full_name(self, obj):     
-        return "лолололол"
+        return "Full Name"
+
+
+class UserShortSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    username = serializers.CharField()
+    absolute_url = serializers.SerializerMethodField()
+    user_avatar = serializers.ImageField(source="user_avatar.image", read_only=True)
+
+    def get_absolute_url(self, obj):
+        return obj.get_absolute_url()
+    
+
+class UserRoleShortSerializer(UserShortSerializer):
+    role = serializers.IntegerField()

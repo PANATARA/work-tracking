@@ -2,10 +2,10 @@ from rest_framework import serializers
 
 from core.constants import get_entity_model_and_serializer
 from apps.projects.serializers.modules import ModuleShortReadOnlySerializer
-from apps.users.serializers.internal.users import UserShortSerializer
+from apps.users.serializers.users import UserShortSerializer
 from apps.workspace.models import workspace_user_config as wpuc
-from apps.workspace.serializers.api.workspace import WorkspaceShortSerializer
-from apps.workspace.serializers.api.workspace_config import TaskStatesSerializer, TaskStatesSerializerLite
+from apps.workspace.serializers.workspace import WorkspaceShortSerializer
+from apps.workspace.serializers.workspace_config import TaskStatesSerializer, TaskStatesSerializerLite
 
 
 class DisplayFiltersSerializer(serializers.ModelSerializer):

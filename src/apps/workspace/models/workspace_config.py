@@ -13,7 +13,7 @@ class WorkspaceConfiguration(models.Model):
     archive_completed_task = models.BooleanField(default=True)
     archive_after = models.DurationField(default=timedelta(days=3))
 
-    """Аdd these fields in the future"""
+    """Add these fields in the future"""
     # workspace_icon = ...
 
     class Meta:

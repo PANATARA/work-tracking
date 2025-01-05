@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 from core.constants import get_entity_model_and_serializer
 from apps.notification.models.notification import Notification
-from apps.users.serializers.internal.users import UserShortSerializer
+from apps.users.serializers.users import UserShortSerializer
 
 User = get_user_model()
 
