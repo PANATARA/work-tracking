@@ -74,11 +74,11 @@ class UnsubscribeUserToTaskService(GetObjectsByIdService, BaseService):
         self.delete_task_subscription(self.users, self.task)
 
     @staticmethod
-    def delete_task_subscription(users: list, task):
+    def delete_task_subscription(users: list, task) -> None:
         TaskSubscriber.objects.filter(task=task, subscriber__in=users).delete()
 
     def get_validators(self) -> list[Callable[..., Any]]:
         return [self.validate_users]
 
-    def validate_users(self):
+    def validate_users(self) -> None:
         self.users = list([user for user in self.users if user != self.task.created_by])

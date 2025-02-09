@@ -71,10 +71,10 @@ class SetProjectState(GetObjectsByIdService, BaseUpdateService):
     def __post_init__(self):
         self.load_objects()
 
-    def execute(self):
+    def execute(self) -> Project:
         return super().update(self.project, {"state": self.state})
     
-    def validate(self):
+    def validate(self) -> ValidationError | None:
         if not projects_states_in_workspace(self.state, self.project.workspace.id):
             raise ValidationError("This workspace does not have this project state")
         return super().validate()
@@ -92,7 +92,7 @@ class SetProjectManager(GetObjectsByIdService, BaseUpdateService):
     def __post_init__(self):
         self.load_objects()
 
-    def execute(self):
+    def execute(self) -> Project:
         return super().update(self.project, {"manager": self.manager})
     
     def validate(self):
